@@ -20,7 +20,7 @@ function searchBooks() {
 
       data.docs.slice(0, 10).forEach(buku => {
         const div = document.createElement('div');
-        div.className = 'book';
+        div.className = 'buku';
        div.innerHTML = `
         <strong>Judul:</strong> ${buku.title}<br>
         <strong>Penulis:</strong> ${buku.author_name ? buku.author_name.join(', ') : 'Tidak diketahui'}<br>

@@ -5,30 +5,83 @@
   <title>Search Buku API</title>
   <style>
     body { font-family: Arial, sans-serif;
-            background-color: black;}
+            background-color: rgb(254, 113, 25);
+          }
     #results { margin-top: 20px; }
     .buku { margin-bottom: 10px; padding: 10px; border: 1px solid #ccc; }
     .cari{
         margin: 0 0 10px;
-        border: 4px solid rgb(192, 22, 22);
-        color: white;
+        color: rgb(7, 18, 241);
         text-align: center;
-        background-color: rosybrown;
-        border-radius: 30px;
         height: fit-content;
+        margin-bottom: 10px;
+        margin-left: 25%;
+        margin-right: 30%;
+        font-size: 30px;
     }
     .search{
         background-color: blanchedalmond;
+        width: 30%;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 10px;
+        margin-right: 3px;
+        padding: 10px;
+    }
+
+    .bt{
+     text-align: center;
+    padding: 10px;
+    margin-left: 10px;
+    width: 5%;
+    border: 2px solid black;
+    background-color: rosybrown;
+    border-radius: 25px;
+    }
+    
+    .result{
+        width: 20%;
+        text-align: center;
+        padding: 5px;
+       background: linear-gradient(
+        100deg,
+       red 40%,
+       rgb(110, 5, 2) 60%
+       );
+      cursor: pointer;
+      border: 2px solid black;
+      border-radius: 10px;
+      background-size: cover;
+      height: max-content;
+      color: white;
+      font: bold 20px Arial, sans-serif;
+      font-size: small;
+      justify-content: center;
+      text-align: center;
+      margin-top: auto;
+      margin-left: 37%;
+      margin-right: 10px;
+      content: initial;
+    }
+
+    .search-c {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   </style>
 </head>
 <body>
 
   <h2 class="cari">Cari Buku (Open Library)</h2>
+  <div class="search-c">
   <input type="text" id="searchInput" placeholder="Masukkan judul buku..." class="search"/>
-  <button onclick="searchBooks()">Cari</button>
+  <button onclick="searchBooks()" class="bt">Cari</button>
+  </div>
 
-  <div id="results"></div>
+  <div id="results" class="result">
+    <p>hasil pencarian akan muncul di sini.</p>
+  </div>
 
   <!-- Hubungkan ke file JavaScript -->
   <script src="script.js"></script>
